@@ -1,0 +1,28 @@
+.row, .col-1, .col-2, .col-3, .col-4 {
+	box-sizing: border-box;
+	float: left;
+}
+
+
+.row {
+	width: 100%;
+}
+.row-2 {
+	min-height: 50vh;
+	box-sizing: border-box;
+}
+.col-1 {
+	width: 25%;
+}
+.col-2 {
+	width: 50%;
+}
+.col-3 {
+	width: 75%;
+}
+.col-4 {
+	width: 100%;
+}
+.flex{
+	display: flex;
+}

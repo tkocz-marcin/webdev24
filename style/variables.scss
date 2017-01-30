@@ -1,0 +1,79 @@
+$margins: 8vw;/* 375px */;
+$navTextColor: #f4f4f4;
+$lightTextColor: #f4f4f4;
+$myWhite: #fefefe;
+$mediumGray: #777;
+$darkGray: #0f0f0f;
+$red: #dc0000;
+$darkOpacity: rgba(255,255,255, 0.85);
+
+
+$cubic: cubic-bezier(.17,.67,.42, 1.4);
+
+$navWidth: calc(30px + 5vw);
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.btn {
+	cursor: pointer;
+}
+
+.center {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+
+
+@mixin btnBorder($colorText, $colorHover, $radius ) {
+	background: transparent;
+	color: $colorText;
+	border: 1px solid $colorText;
+	border-radius: $radius;
+	transition: color .4s,
+				background .3s;
+	&:hover {
+		color: $colorHover;
+		background: $colorText;
+	}
+}
+
+@mixin circleBorder($color, $color2, $size) {
+	width: $size;
+	height: $size;
+	display: inline-block;
+	background: $color;
+	border: 2px solid $color2;
+	border-radius: 50%;
+	transition: all .3s;
+	&:hover {
+		background: $color2;
+		border: 2px solid $color;
+	}
+}
+
+.circle_white {
+	margin: 0 3px;
+	cursor: pointer;
+	@include circleBorder($myWhite, transparent, 10px);
+}
+.circle_white_active {
+	margin: 0 3px;
+	cursor: pointer;
+	@include circleBorder(transparent, $myWhite, 12px);
+}
+.circle_gray {
+	margin: 0 3px;
+	cursor: pointer;
+	@include circleBorder($mediumGray, transparent, 10px);
+}
+.circle_gray_active {
+	margin: 0 3px;
+	cursor: pointer;
+	@include circleBorder(transparent, $red, 12px);
+}
